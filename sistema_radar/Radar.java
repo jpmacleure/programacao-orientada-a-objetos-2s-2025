@@ -10,6 +10,22 @@ public class Radar {
         this.limiteVelocidade = limiteVelocidade;
     }
 
+    public String getLocalizacao(){
+        return this.localizacao;
+    }
+
+    public void setLocalizacao(String localizacao){
+        this.localizacao = localizacao;
+    }
+
+    public Integer getLimiteVelocidade(){
+        return this.limiteVelocidade;
+    }
+
+    public void setLimiteVelocidade(Integer limiteVelocidade){
+        this.limiteVelocidade = limiteVelocidade;
+    }
+
     public void emitirNotificacao(String placa, Integer velocidadeObservada){
         System.out.println("Placa: "+placa);
         System.out.println("Velocidade observada: "+velocidadeObservada);
