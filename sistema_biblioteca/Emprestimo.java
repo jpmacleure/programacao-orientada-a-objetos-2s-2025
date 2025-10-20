@@ -1,22 +1,22 @@
 public class Emprestimo {
-    private Pessoa pessoa;
+    private TomadorEmprestimo tomadorEmprestimo;
     private Material material;
     private String dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) {
-        this.pessoa = pessoa;
+    public Emprestimo(TomadorEmprestimo tomadorEmprestimo, Material material, String dataEmprestimo, String dataDevolucao) {
+        this.tomadorEmprestimo = tomadorEmprestimo;
         this.material = material;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
 
-    public Pessoa getPessoa() {
-        return this.pessoa;
+    public TomadorEmprestimo getTomadorEmprestimo() {
+        return this.tomadorEmprestimo;
     }
 
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public void setTomadorEmprestimo(TomadorEmprestimo tomadorEmprestimo) {
+        this.tomadorEmprestimo = tomadorEmprestimo;
     }
 
     public Material getMaterial() {
@@ -46,8 +46,8 @@ public class Emprestimo {
     public void exibirDetalhes(){
         System.out.println("Data do empréstimo: " + this.dataEmprestimo);
         System.out.println("Data da devolução: " + this.dataDevolucao);
-        System.out.println("Pessoa vinculada");
-        this.pessoa.exibirInfo();
+        System.out.println("TomadorEmprestimo vinculada");
+        this.tomadorEmprestimo.exibirInfo();
         System.out.println("Material vinculada");
         this.material.descricao();
     }
