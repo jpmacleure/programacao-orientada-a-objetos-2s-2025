@@ -1,4 +1,4 @@
-public abstract class Pessoa implements TomadorEmprestimo{
+public abstract class Pessoa{
     private String nome;
     private String email;
 

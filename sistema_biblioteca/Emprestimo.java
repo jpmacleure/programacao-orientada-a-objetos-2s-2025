@@ -1,30 +1,30 @@
 public class Emprestimo {
-    private TomadorEmprestimo tomadorEmprestimo;
-    private ItemEmprestavel itemEmprestavel;
+    private Pessoa pessoa;
+    private Material material;
     private String dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(TomadorEmprestimo tomadorEmprestimo, ItemEmprestavel itemEmprestavel, String dataEmprestimo, String dataDevolucao) {
-        this.tomadorEmprestimo = tomadorEmprestimo;
-        this.itemEmprestavel = itemEmprestavel;
+    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) {
+        this.pessoa = pessoa;
+        this.material = material;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = dataDevolucao;
     }
 
-    public TomadorEmprestimo getTomadorEmprestimo() {
-        return this.tomadorEmprestimo;
+    public Pessoa getPessoa() {
+        return this.pessoa;
     }
 
-    public void setTomadorEmprestimo(TomadorEmprestimo tomadorEmprestimo) {
-        this.tomadorEmprestimo = tomadorEmprestimo;
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 
-    public ItemEmprestavel getItemEmprestavel() {
-        return this.itemEmprestavel;
+    public Material getMaterial() {
+        return this.material;
     }
 
-    public void setItemEmprestavel(ItemEmprestavel itemEmprestavel) {
-        this.itemEmprestavel = itemEmprestavel;
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
     public String getDataEmprestimo() {
@@ -47,8 +47,8 @@ public class Emprestimo {
         System.out.println("Data do empréstimo: " + this.dataEmprestimo);
         System.out.println("Data da devolução: " + this.dataDevolucao);
         System.out.println("Pessoa vinculada");
-        this.tomadorEmprestimo.exibirInfo();
-        System.out.println("ItemEmprestavel vinculada");
-        this.itemEmprestavel.descricao();
+        this.pessoa.exibirInfo();
+        System.out.println("Material vinculada");
+        this.material.descricao();
     }
 }

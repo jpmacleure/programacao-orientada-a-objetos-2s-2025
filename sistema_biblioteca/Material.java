@@ -1,4 +1,4 @@
-public abstract class Material implements ItemEmprestavel{
+public abstract class Material{
     private String titulo;
     private Integer anoPublicacao;
 

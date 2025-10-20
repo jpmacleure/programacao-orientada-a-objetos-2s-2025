@@ -11,13 +11,6 @@ public class Main {
 
         int opcao;
 
-        // Exemplo fixo
-        Instituicao UCB = new Instituicao("123456", "UCB", "Brasília-DF");
-        ColecaoArte colecao = new ColecaoArte("JP", 3);
-        Emprestimo exemploUCB = new Emprestimo(UCB, colecao, "15/10/2025", "15/11/2025");
-        emprestimos.add(exemploUCB);
-
-
         do {
             System.out.println("===== SISTEMA DE BIBLIOTECA =====");
             System.out.println("1 - Cadastrar Usuário");
