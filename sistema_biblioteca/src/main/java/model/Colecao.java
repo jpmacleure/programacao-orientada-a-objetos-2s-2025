@@ -1,3 +1,7 @@
+package model;
+
+import interfaces.ItemEmprestavel;
+
 public class Colecao implements ItemEmprestavel{
     private String proprietario;
     private Integer qtItens;

@@ -1,3 +1,7 @@
+package model;
+
+import interfaces.TomadorEmprestimo;
+
 public class Instituicao implements TomadorEmprestimo{
     private String nome;
     private String cnpj;

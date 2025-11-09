@@ -1,3 +1,7 @@
+package model;
+
+import interfaces.ItemEmprestavel;
+
 public abstract class Material implements ItemEmprestavel{
     private String titulo;
     private Integer anoPublicacao;

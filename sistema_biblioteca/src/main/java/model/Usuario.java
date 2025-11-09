@@ -1,5 +1,14 @@
+package model;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("usuario")
 public class Usuario extends Pessoa{
     private Integer matricula;
+
+    protected Usuario(){}
 
     public Usuario(String nome, String email, Integer matricula){
         super(nome, email);

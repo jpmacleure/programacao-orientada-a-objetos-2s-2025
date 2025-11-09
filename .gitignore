@@ -1,3 +1,9 @@
+.vscode
+
+*.sqlite
+
+*/target/*
+
 # Compiled class file
 *.class
 

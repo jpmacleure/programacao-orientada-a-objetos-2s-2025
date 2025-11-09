@@ -1,3 +1,4 @@
+package model;
 public class Revista extends Material{
     private Integer edicao;
 

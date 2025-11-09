@@ -1,3 +1,8 @@
+package model;
+
+import interfaces.ItemEmprestavel;
+import interfaces.TomadorEmprestimo;
+
 public class Emprestimo {
     private TomadorEmprestimo tomadorEmprestimo;
     private ItemEmprestavel itemEmprestavel;
