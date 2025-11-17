@@ -23,6 +23,8 @@ exemplo_bd
 
 ## Configuração do Maven (pom.xml)
 
+O Maven é um gerenciador de pacotes para a linguagem Java. Por meio dessa ferramenta é possível instalar bibliotecas que oferecem funcionalidades de conexão com o banco de dados e etc. Nesse projeto, utiliza-se bibliotecas como o hibernate (ORM), JDBC (conector) e sqlite(BD).
+
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -101,7 +103,11 @@ exemplo_bd
 
 </project>
 ```
-##  COnfiguração do banco de dados sqlite (resources/hibernate.cfg.xml)
+
+##  Configuração do banco de dados sqlite (resources/hibernate.cfg.xml)
+
+O hibernate(ORM) fará o trabalho de mapear as classes `.java` para tabelas no banco de dados, além de habilitar as transações nas tabelas mapeadas. Para tanto, é preciso que sejam especificadas as configurações de conexão e mapeamento. Essas configurações são definidas por meio do arquivo `resources/hibernate.cfg.xml`.
+
 ```xml
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration">
@@ -131,6 +137,9 @@ exemplo_bd
 ```
 
 ## Produto.java
+
+A classe `Produto.java` é uma classe definida para representar um objeto com nome e quantidade, ou seja, a abstração simplificada de um produto qualquer. Nessa classe, utilizou-se conceitos de encapsulamento, método construtor, getters e setters. Além das características básicas, a classe foi mapeada com anotações do javax que permitirão que o hibernate faça o trabalho de vinculação dessa classe com uma tabela no banco de dados. Isso é a aplicação do conceito ORM.
+
 ```java
 package entity;
 
@@ -192,6 +201,9 @@ public class Produto {
 ```
 
 ## ProdutoDAO.java
+
+A classe `ProdutoDAO.java` segue o padrão Data Access Object (DAO) que é um padrão estrutural usado no desenvolvimento de software. O seu objetivo é abstrair e encapsular todo acesso e transação com as fontes de dados da aplicação. Funciona como uma camada intermediária entre a lógica do negócio e as camdas de persistência, como banco de dados, arquivos e etc.
+
 ```java
 package dao;
 
@@ -293,6 +305,9 @@ public class ProdutoDAO {
 ```
 
 ## Main.java
+
+A classe `Main.java` implementa a função main (executável) que habilita a execução da aplicação. No método main foram implementadas as regras de negócio da aplicação: apresentação do menu de funcionalidades, seleção de opção e execução da opção selecionada.
+
 ```java
 import java.util.ArrayList;
 import java.util.Scanner;
